@@ -1,0 +1,4 @@
+mixin addToCartBtn(productID)
+  form(action="/cart", method="POST")
+    button.btn(type="submit") add to cart
+    input(type="hidden", name="productID", value=productID)

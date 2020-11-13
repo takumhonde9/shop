@@ -1,0 +1,21 @@
+extends ../layouts/main-layout.pug
+
+include ../components/addToCartBtn.pug
+
+block styles
+
+
+block content
+  main
+    .product-card
+      h1.product-card__title #{product.title}
+      img.product-card__img(src=product.imageUrl)
+      p.product-card__price
+        span Price
+        span $#{product.price}
+      +addToCartBtn(product.id)
+      p.product-card__description
+        span Description
+        span #{product.description}
+      
+    
